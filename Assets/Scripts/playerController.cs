@@ -5,7 +5,7 @@ using UnityEngine;
 public class playerController : MonoBehaviour
 {
 
-    public int playerSpeed = 10;
+    public int playerSpeed;
 
     private Vector3 moveXY;
     private Vector2 mousePos;
@@ -33,7 +33,6 @@ public class playerController : MonoBehaviour
 
         //Player Movement
         moveXY = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
-        mousePos = Input.mousePosition;
         rb2d.AddForce(moveXY * playerSpeed);
 
         //Player Rotation
