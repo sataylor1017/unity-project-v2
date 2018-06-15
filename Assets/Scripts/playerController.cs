@@ -33,7 +33,7 @@ public class playerController : MonoBehaviour
 
         //Player Movement
         moveXY = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
-        rb2d.AddForce(moveXY * playerSpeed);
+        rb2d.velocity = (moveXY * playerSpeed);
 
         //Player Rotation
         mousePosition = Camera.main.ScreenToWorldPoint(new Vector3 (Input.mousePosition.x, Input.mousePosition.y, 0.0f));
